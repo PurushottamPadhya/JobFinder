@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6E986C020375A7A870987A76 /* Pods_JobFinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3FE98ED79DB1976B653B901 /* Pods_JobFinderUITests.framework */; };
 		95006872B3480734C34F4D6B /* Pods_JobFinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73048CFD949F904F31473F3A /* Pods_JobFinderTests.framework */; };
+		CE92BB342223BF5F005EBCAC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92BB332223BF5F005EBCAC /* Constants.swift */; };
+		CE92BB3922241192005EBCAC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92BB3822241192005EBCAC /* Colors.swift */; };
 		D479A2B9B8403021BE90393C /* Pods_JobFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032BA5BD3786095B42D024A1 /* Pods_JobFinder.framework */; };
 		D48065F42222F6380057F7BD /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48065F32222F6380057F7BD /* Helper.swift */; };
 		D48065F922230C140057F7BD /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48065F822230C140057F7BD /* Reachability.swift */; };
@@ -51,6 +53,8 @@
 		6603B13CC6B4BE04B9746780 /* Pods-JobFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JobFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-JobFinder/Pods-JobFinder.release.xcconfig"; sourceTree = "<group>"; };
 		73048CFD949F904F31473F3A /* Pods_JobFinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JobFinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3FE98ED79DB1976B653B901 /* Pods_JobFinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JobFinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE92BB332223BF5F005EBCAC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CE92BB3822241192005EBCAC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		D48065F32222F6380057F7BD /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		D48065F822230C140057F7BD /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		D48065FA22230E9F0057F7BD /* GlobalMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalMethods.swift; sourceTree = "<group>"; };
@@ -221,6 +225,8 @@
 				D4A004182222C3A0009B9F81 /* APIManager.swift */,
 				D48065F32222F6380057F7BD /* Helper.swift */,
 				D48065FA22230E9F0057F7BD /* GlobalMethods.swift */,
+				CE92BB332223BF5F005EBCAC /* Constants.swift */,
+				CE92BB3822241192005EBCAC /* Colors.swift */,
 			);
 			path = Utillities;
 			sourceTree = "<group>";
@@ -447,10 +453,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4A004192222C3A0009B9F81 /* APIManager.swift in Sources */,
+				CE92BB3922241192005EBCAC /* Colors.swift in Sources */,
 				D48065F42222F6380057F7BD /* Helper.swift in Sources */,
 				D4A003E22222A8AB009B9F81 /* JobListingViewController.swift in Sources */,
 				D4A004152222B50D009B9F81 /* JobDetail.swift in Sources */,
 				D4A004122222B2FB009B9F81 /* JobDetailViewController.swift in Sources */,
+				CE92BB342223BF5F005EBCAC /* Constants.swift in Sources */,
 				D4A003E02222A8AB009B9F81 /* AppDelegate.swift in Sources */,
 				D48065FB22230E9F0057F7BD /* GlobalMethods.swift in Sources */,
 				D48065F922230C140057F7BD /* Reachability.swift in Sources */,

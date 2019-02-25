@@ -122,6 +122,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="OdY-Vw-ziU"/>
+                    <connections>
+                        <outlet property="jobTableView" destination="HjB-f2-k4A" id="98x-7t-qPt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

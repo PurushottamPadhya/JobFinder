@@ -11,14 +11,7 @@ import UIKit
 
 
 class Helper: NSObject {
-    
-    
-    
-    
-    
-    
-    
-    
+
     
     class func showToastShort(message : String, view: UIView) {
         
