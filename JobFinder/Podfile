@@ -6,6 +6,7 @@ target 'JobFinder' do
 
   pod 'SDWebImage'
   pod 'Alamofire'
+  pod 'AlamofireObjectMapper'
 
 
   target 'JobFinderTests' do

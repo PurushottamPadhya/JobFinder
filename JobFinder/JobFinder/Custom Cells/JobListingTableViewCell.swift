@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SDWebImage
 
 class JobListingTableViewCell: UITableViewCell {
     @IBOutlet weak var logoImageView: UIImageView!
@@ -27,12 +27,12 @@ class JobListingTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setJobData(_ detail: JobDetail?){
-        logoImageView.image = UIImage.init(named: detail?.logo ?? "")
-        jobTitleLabel.text = detail?.jobTitle ?? ""
-         companyNameLabel.text = detail?.companyName ?? ""
-        jobLocationLabel.text = detail?.jobLocations?[0].location ?? ""
-         jobPostedDateLabel.text = detail?.jobPostedDate ?? ""
+    func setJobData(_ detail: JobModel?){
+        logoImageView.setImageWithUrl(url: detail?.logo ?? "", imgView: logoImageView, placeholderType: PlaceHolerType.small)
+        jobTitleLabel.text = detail?.position_title
+         companyNameLabel.text = detail?.organization_name
+        jobLocationLabel.text = detail?.locations?[0]
+         jobPostedDateLabel.text = detail?.start_date
     }
 
 }

@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Alamofire
+import ObjectMapper
 
 class JobListingViewController: UIViewController {
     
     @IBOutlet weak var jobTableView: UITableView!
     
-    var jobDetails = [JobDetail]() {
+    var jobDetails = [JobModel]() {
         didSet {
             DispatchQueue.main.async {
                 self.jobTableView.reloadData()
@@ -46,17 +48,14 @@ class JobListingViewController: UIViewController {
                                     
                                     guard let strongSelf = self else {return}
                                     
-                                   // guard let data = data else {print("error on data"); return}
-
-                                    do {
-                                        let jobDetails = try JSONDecoder().decode([JobDetail].self, from: data as! Data)
-                                        strongSelf.jobDetails = jobDetails
-                                        print(jobDetails)
+                                    guard let data = data as? [[String: AnyObject]], data.count > 0 else{
+                                        print("handle error")
+                                        return
                                     }
-                                    catch let parsingError {
-                                        print("Error", parsingError)
-                                    }
-                                    
+                                     let response = Mapper<JobModel>().mapArray(JSONArray: data)
+                                    strongSelf.jobDetails =  response
+                                    strongSelf.jobTableView.reloadData()
+   
                             }, errorBlock: {
                                 [weak self] error in
                                 guard let _ = self else { return }
@@ -77,7 +76,7 @@ extension JobListingViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "job", for: indexPath) as! JobListingTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "jobListingTableViewCellIdentifier", for: indexPath) as! JobListingTableViewCell
         
         cell.setJobData(jobDetails[indexPath.row])
         
