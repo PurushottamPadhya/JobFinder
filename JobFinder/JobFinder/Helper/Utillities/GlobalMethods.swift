@@ -17,5 +17,3 @@ func showProgressHud(){
 func hideProgressHud(){
     UIApplication.shared.isNetworkActivityIndicatorVisible = false
 }
-
-extension UIimage

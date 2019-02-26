@@ -24,16 +24,15 @@ public enum withRequestType {
 }
 public class APIManager {
     
-    var dataRequest: DataRequest
+    var dataRequest: DataRequest!
     var params: [String: AnyObject]?
     
     
     
     
     public init (_ requestType : withRequestType, urlString: String, parameters: [String: AnyObject]? = nil, headers: [String: String] = [String:String](), method: Alamofire.HTTPMethod = .post) {
-        
         self.params = parameters
-        let accessToken : String?
+        let accessToken : String? = "hello"
         switch requestType {
             
         case .withAuthorizationText:
@@ -66,6 +65,7 @@ public class APIManager {
             break
             
         case .withCustomHeader:
+            
             break
             
         }

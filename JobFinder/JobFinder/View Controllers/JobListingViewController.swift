@@ -24,6 +24,7 @@ class JobListingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.getJobs(with: nil)
     }
     
     func getJobs(with category : String?){
@@ -32,9 +33,9 @@ class JobListingViewController: UIViewController {
             
         }
         else{
-           jobsUrl = BASE_URL + JOB_LIST_URL
+           jobsUrl = urlCollection.govJobListBaseUrl + urlCollection.govAllJobs
         }
-        
+        jobsUrl = urlCollection.govJobListBaseUrl + urlCollection.govAllJobs
         
         APIManager.init(.withoutHeader,
                         urlString: jobsUrl,
@@ -44,9 +45,16 @@ class JobListingViewController: UIViewController {
                                   completionHandler: { [weak self](data) in
                                     
                                     guard let strongSelf = self else {return}
-                                    guard let jobDetails = try? JSONDecoder().decode([jobDetails], from: data as! Data) else{
-                                        print("decoding failed")
-                                        return
+                                    
+                                   // guard let data = data else {print("error on data"); return}
+
+                                    do {
+                                        let jobDetails = try JSONDecoder().decode([JobDetail].self, from: data as! Data)
+                                        strongSelf.jobDetails = jobDetails
+                                        print(jobDetails)
+                                    }
+                                    catch let parsingError {
+                                        print("Error", parsingError)
                                     }
                                     
                             }, errorBlock: {

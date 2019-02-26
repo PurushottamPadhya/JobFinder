@@ -31,7 +31,7 @@ class JobListingTableViewCell: UITableViewCell {
         logoImageView.image = UIImage.init(named: detail?.logo ?? "")
         jobTitleLabel.text = detail?.jobTitle ?? ""
          companyNameLabel.text = detail?.companyName ?? ""
-         jobLocationLabel.text = detail?.jobLocation ?? ""
+        jobLocationLabel.text = detail?.jobLocations?[0].location ?? ""
          jobPostedDateLabel.text = detail?.jobPostedDate ?? ""
     }
 
