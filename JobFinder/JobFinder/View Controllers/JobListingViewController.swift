@@ -26,7 +26,29 @@ class JobListingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+       self.setupFilterButtonBar()
+    self.navigationController?.isNavigationBarHidden = false
         self.getJobs(with: nil)
+    }
+    
+    func setupFilterButtonBar(){
+        let filterButton = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
+        filterButton.isUserInteractionEnabled = true
+        filterButton.setImage(UIImage(named: "filter"), for: .normal)
+        let filterItem = UIBarButtonItem(customView: filterButton)
+        filterButton.addTarget(self, action: #selector(filterButtonTapped), for: .touchUpInside)
+        
+        self.navigationItem.rightBarButtonItems = [filterItem]
+        
+        
+        self.view.layoutIfNeeded()
+
+    }
+    @objc func filterButtonTapped(){
+        print("filter Button tapped")
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "FilterVC") as! FilterViewController
+        vc.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        self.present(vc, animated: false, completion: nil)
     }
     
     func getJobs(with category : String?){
@@ -86,6 +108,11 @@ extension JobListingViewController : UITableViewDelegate, UITableViewDataSource{
         
         let selectedJob = jobDetails[indexPath.row]
         print(selectedJob)
+        
+        guard let url = selectedJob.url else{ return}
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "JobDetailVC") as? JobDetailViewController
+        vc?.redirectUrl = url
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -15,6 +15,8 @@
 		D48065F42222F6380057F7BD /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48065F32222F6380057F7BD /* Helper.swift */; };
 		D48065F922230C140057F7BD /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48065F822230C140057F7BD /* Reachability.swift */; };
 		D48065FB22230E9F0057F7BD /* GlobalMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48065FA22230E9F0057F7BD /* GlobalMethods.swift */; };
+		D48065FD2225B8A00057F7BD /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48065FC2225B8A00057F7BD /* SplashViewController.swift */; };
+		D48065FF2225BED00057F7BD /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48065FE2225BED00057F7BD /* FilterViewController.swift */; };
 		D4A003E02222A8AB009B9F81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A003DF2222A8AB009B9F81 /* AppDelegate.swift */; };
 		D4A003E22222A8AB009B9F81 /* JobListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A003E12222A8AB009B9F81 /* JobListingViewController.swift */; };
 		D4A003E52222A8AB009B9F81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4A003E32222A8AB009B9F81 /* Main.storyboard */; };
@@ -58,6 +60,8 @@
 		D48065F32222F6380057F7BD /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		D48065F822230C140057F7BD /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		D48065FA22230E9F0057F7BD /* GlobalMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalMethods.swift; sourceTree = "<group>"; };
+		D48065FC2225B8A00057F7BD /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		D48065FE2225BED00057F7BD /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		D4A003DC2222A8AB009B9F81 /* JobFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4A003DF2222A8AB009B9F81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4A003E12222A8AB009B9F81 /* JobListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListingViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +211,8 @@
 			children = (
 				D4A003E12222A8AB009B9F81 /* JobListingViewController.swift */,
 				D4A004112222B2FB009B9F81 /* JobDetailViewController.swift */,
+				D48065FC2225B8A00057F7BD /* SplashViewController.swift */,
+				D48065FE2225BED00057F7BD /* FilterViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -459,9 +465,11 @@
 				D4A004192222C3A0009B9F81 /* APIManager.swift in Sources */,
 				CE92BB3922241192005EBCAC /* Colors.swift in Sources */,
 				D48065F42222F6380057F7BD /* Helper.swift in Sources */,
+				D48065FD2225B8A00057F7BD /* SplashViewController.swift in Sources */,
 				D4A003E22222A8AB009B9F81 /* JobListingViewController.swift in Sources */,
 				D4A004152222B50D009B9F81 /* JobDetail.swift in Sources */,
 				D4A004122222B2FB009B9F81 /* JobDetailViewController.swift in Sources */,
+				D48065FF2225BED00057F7BD /* FilterViewController.swift in Sources */,
 				CE92BB342223BF5F005EBCAC /* Constants.swift in Sources */,
 				D4A003E02222A8AB009B9F81 /* AppDelegate.swift in Sources */,
 				D48065FB22230E9F0057F7BD /* GlobalMethods.swift in Sources */,

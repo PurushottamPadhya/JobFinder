@@ -9,10 +9,10 @@
 import Foundation
 import  UIKit
 
-struct PlaceHolerType {
-    static let small = "small-icon"
-    static let medium = "medium-icon"
-    static let large = "large-icon"
+enum PlaceHolerType: String {
+    case small = "small-icon"
+    case medium = "medium-icon"
+    case large = "large-icon"
 }
 
 func showProgressHud(){
@@ -28,7 +28,7 @@ extension UIImageView{
     
     func setImageWithUrl(url: String, imgView: UIImageView, placeholderType: String){
         
-        if  placeholderType == PlaceHolerType.small {
+        if  placeholderType == PlaceHolerType.small.rawValue {
             imgView.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "defaultIcon"))
         }
             

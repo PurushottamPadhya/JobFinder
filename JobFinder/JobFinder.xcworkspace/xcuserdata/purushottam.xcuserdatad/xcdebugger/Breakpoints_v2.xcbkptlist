@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JobFinder/View Controllers/JobListingViewController.swift"
-            timestampString = "572811468.827481"
+            timestampString = "572899414.5259269"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "getJobs(with:)"
             landmarkType = "7">
          </BreakpointContent>

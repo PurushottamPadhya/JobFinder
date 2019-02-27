@@ -28,7 +28,7 @@ class JobListingTableViewCell: UITableViewCell {
     }
     
     func setJobData(_ detail: JobModel?){
-        logoImageView.setImageWithUrl(url: detail?.logo ?? "", imgView: logoImageView, placeholderType: PlaceHolerType.small)
+        logoImageView.setImageWithUrl(url: detail?.logo ?? "", imgView: logoImageView, placeholderType: PlaceHolerType.small.rawValue)
         jobTitleLabel.text = detail?.position_title
          companyNameLabel.text = detail?.organization_name
         jobLocationLabel.text = detail?.locations?[0]
