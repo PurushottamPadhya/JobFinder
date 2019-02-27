@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6E986C020375A7A870987A76 /* Pods_JobFinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3FE98ED79DB1976B653B901 /* Pods_JobFinderUITests.framework */; };
 		95006872B3480734C34F4D6B /* Pods_JobFinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73048CFD949F904F31473F3A /* Pods_JobFinderTests.framework */; };
+		CE601E4922265161003CFA98 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601E4822265161003CFA98 /* FilterTableViewCell.swift */; };
+		CE601E4B22265209003CFA98 /* FilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE601E4A22265209003CFA98 /* FilterModel.swift */; };
 		CE92BB342223BF5F005EBCAC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92BB332223BF5F005EBCAC /* Constants.swift */; };
 		CE92BB3922241192005EBCAC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92BB3822241192005EBCAC /* Colors.swift */; };
 		D479A2B9B8403021BE90393C /* Pods_JobFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032BA5BD3786095B42D024A1 /* Pods_JobFinder.framework */; };
@@ -55,6 +57,8 @@
 		6603B13CC6B4BE04B9746780 /* Pods-JobFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JobFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-JobFinder/Pods-JobFinder.release.xcconfig"; sourceTree = "<group>"; };
 		73048CFD949F904F31473F3A /* Pods_JobFinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JobFinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3FE98ED79DB1976B653B901 /* Pods_JobFinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JobFinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE601E4822265161003CFA98 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
+		CE601E4A22265209003CFA98 /* FilterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterModel.swift; sourceTree = "<group>"; };
 		CE92BB332223BF5F005EBCAC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE92BB3822241192005EBCAC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		D48065F32222F6380057F7BD /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				D4A0040E2222B2B7009B9F81 /* JobListingTableViewCell.swift */,
+				CE601E4822265161003CFA98 /* FilterTableViewCell.swift */,
 			);
 			path = "Custom Cells";
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				D4A004142222B50D009B9F81 /* JobDetail.swift */,
+				CE601E4A22265209003CFA98 /* FilterModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -462,11 +468,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE601E4B22265209003CFA98 /* FilterModel.swift in Sources */,
 				D4A004192222C3A0009B9F81 /* APIManager.swift in Sources */,
 				CE92BB3922241192005EBCAC /* Colors.swift in Sources */,
 				D48065F42222F6380057F7BD /* Helper.swift in Sources */,
 				D48065FD2225B8A00057F7BD /* SplashViewController.swift in Sources */,
 				D4A003E22222A8AB009B9F81 /* JobListingViewController.swift in Sources */,
+				CE601E4922265161003CFA98 /* FilterTableViewCell.swift in Sources */,
 				D4A004152222B50D009B9F81 /* JobDetail.swift in Sources */,
 				D4A004122222B2FB009B9F81 /* JobDetailViewController.swift in Sources */,
 				D48065FF2225BED00057F7BD /* FilterViewController.swift in Sources */,

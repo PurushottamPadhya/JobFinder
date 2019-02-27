@@ -242,7 +242,59 @@
                     <view key="view" contentMode="scaleToFill" id="y9g-tb-j9K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YWd-2K-K6y">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="filterCellIdentifier" rowHeight="50" id="vFw-AT-3s1" customClass="FilterTableViewCell" customModule="JobFinder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vFw-AT-3s1" id="ZVr-iG-cXI">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPN-my-BTF">
+                                                    <rect key="frame" x="25" y="10" width="290" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="3Zh-62-dfR"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJl-t7-Qoo">
+                                                    <rect key="frame" x="325" y="10" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="MeH-C2-Oq9"/>
+                                                        <constraint firstAttribute="height" constant="30" id="SiC-YS-jrg"/>
+                                                    </constraints>
+                                                    <state key="normal" image="uncheck"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="QJl-t7-Qoo" firstAttribute="leading" secondItem="WPN-my-BTF" secondAttribute="trailing" constant="10" id="PLz-CB-bZz"/>
+                                                <constraint firstItem="QJl-t7-Qoo" firstAttribute="centerY" secondItem="WPN-my-BTF" secondAttribute="centerY" id="TLp-q2-D3W"/>
+                                                <constraint firstAttribute="trailing" secondItem="QJl-t7-Qoo" secondAttribute="trailing" constant="20" id="Vbk-Lh-dzw"/>
+                                                <constraint firstItem="WPN-my-BTF" firstAttribute="leading" secondItem="ZVr-iG-cXI" secondAttribute="leadingMargin" constant="10" id="fPs-YC-epW"/>
+                                                <constraint firstItem="WPN-my-BTF" firstAttribute="centerY" secondItem="ZVr-iG-cXI" secondAttribute="centerY" id="t78-Dv-dSM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="checkUncheckButton" destination="QJl-t7-Qoo" id="Lqw-jJ-hTT"/>
+                                            <outlet property="filterTitleLabel" destination="WPN-my-BTF" id="lHo-cz-5T3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="0.88505314089999998" green="0.60955740010000004" blue="0.39046011819999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="R5R-5n-4jP" firstAttribute="trailing" secondItem="YWd-2K-K6y" secondAttribute="trailing" id="7jk-ax-OBd"/>
+                            <constraint firstItem="YWd-2K-K6y" firstAttribute="leading" secondItem="R5R-5n-4jP" secondAttribute="leading" id="bNm-4g-0p7"/>
+                            <constraint firstItem="R5R-5n-4jP" firstAttribute="bottom" secondItem="YWd-2K-K6y" secondAttribute="bottom" id="rd5-bf-keY"/>
+                            <constraint firstItem="YWd-2K-K6y" firstAttribute="top" secondItem="R5R-5n-4jP" secondAttribute="top" id="s3j-ZV-Zp5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="R5R-5n-4jP"/>
                     </view>
                     <navigationItem key="navigationItem" id="SWx-LD-81x"/>
@@ -252,4 +304,7 @@
             <point key="canvasLocation" x="4246" y="154"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="uncheck" width="24" height="24"/>
+    </resources>
 </document>

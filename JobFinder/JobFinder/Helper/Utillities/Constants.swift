@@ -15,6 +15,7 @@ enum urlType : String{
     case live = "https://my.ntentertainment.net/api/"
 }
 
+
 let baseUrl = urlType.live.rawValue
 struct urlCollection  {
     

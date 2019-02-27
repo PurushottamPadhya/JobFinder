@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
             endingLineNumber = "50"
-            landmarkName = "getJobs(with:)"
+            landmarkName = "filterButtonTapped()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -31,7 +31,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "74"
             endingLineNumber = "74"
-            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkName = "getJobs(with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -47,7 +47,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "79"
             endingLineNumber = "79"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkName = "getJobs(with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
