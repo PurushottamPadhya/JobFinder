@@ -13,6 +13,17 @@ import UIKit
 class Helper: NSObject {
 
     
+    class func saveValueOnUserDefaults(value: Any, key: String){
+        UserDefaults.standard.set(value, forKey: key)
+        UserDefaults.standard.synchronize()
+    }
+    
+    class func getValueFromUserDefaults(key: String) -> Any?{
+        if let value = UserDefaults.standard.value(forKey: key) {
+           return value
+        }
+        return nil
+    }
     
     class func showToastShort(message : String, view: UIView) {
         

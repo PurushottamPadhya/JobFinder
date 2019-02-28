@@ -9,7 +9,29 @@
 import Foundation
 import ObjectMapper
 
-class YourFilterModel: StaticMappable  {
+
+class FilterModel: StaticMappable {
+    var category: [FilterDetailModel]?
+    var isSelected = false
+    
+    init(_category: [FilterDetailModel]?, _isSelected: Bool?) {
+        category = _category
+        isSelected = _isSelected ?? false
+    }
+    
+    required init?(map: Map) {
+    }
+    static func objectForMapping(map: Map) -> BaseMappable? {
+        return self.init(map : map)
+    }
+    
+    func mapping(map: Map) {
+        
+    }
+    
+}
+
+class FilterDetailModel: StaticMappable  {
     var name: String?
     var isSelected = false
     

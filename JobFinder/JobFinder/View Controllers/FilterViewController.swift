@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class FilterViewController: UIViewController {
 
+    var filterDictionary =  Dictionary<String, Any>()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,4 +29,40 @@ class FilterViewController: UIViewController {
     }
     */
 
+}
+
+extension FilterViewController: UITableViewDelegate, UITableViewDataSource{
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "filterCellIdentifier", for: indexPath)
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 60.0
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let headerView = UIView()
+        
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        return 50
+    }
+    
+    
 }

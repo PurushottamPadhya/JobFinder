@@ -15,6 +15,11 @@ enum PlaceHolerType: String {
     case large = "large-icon"
 }
 
+enum providerType {
+    case gov
+    case github
+}
+
 func showProgressHud(){
     
     UIApplication.shared.isNetworkActivityIndicatorVisible = true
