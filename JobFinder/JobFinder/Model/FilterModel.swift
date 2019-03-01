@@ -11,12 +11,14 @@ import ObjectMapper
 
 
 class FilterModel: StaticMappable {
-    var category: [FilterDetailModel]?
-    var isSelected = false
+    var provider: [FilterDetailModel]?
+    var location: [FilterDetailModel]?
+    var position : [FilterDetailModel]?
     
-    init(_category: [FilterDetailModel]?, _isSelected: Bool?) {
-        category = _category
-        isSelected = _isSelected ?? false
+    init(_provider: [FilterDetailModel]?, _location: [FilterDetailModel]?, _position: [FilterDetailModel]?) {
+        provider = _provider
+        location = _location
+        position = _position
     }
     
     required init?(map: Map) {
@@ -26,6 +28,10 @@ class FilterModel: StaticMappable {
     }
     
     func mapping(map: Map) {
+        
+        provider <- map["provider"]
+        position <- map["position"]
+        location <- map["location"]
         
     }
     
